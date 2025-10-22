@@ -23,7 +23,3 @@ This project is a clean, modular, and extensible version of the classic **FizzBu
 | **SOLID** | SRP & OCP applied via independent rule functions |
 | **Functional Programming** | Pure functions, no side effects, composable logic |
 
----
-
-## 🧩 Folder Structure
-
