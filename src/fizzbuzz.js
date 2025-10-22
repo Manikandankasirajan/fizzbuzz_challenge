@@ -1,15 +1,17 @@
-function fizzbuzz(num) {
-	if (num % 3 === 0 && num % 5 === 0) {
-		return "FizzBuzz";
-	}
-	if (num % 3 === 0) {
-		return "Fizz";
-	}
-	if (num % 5 === 0) {
-		return "Buzz";
-	}
+import fizzRule from "./rules/fizzRule";
+import buzzRule from "./rules/buzzRule";
+import fizzBuzzRule from "./rules/fizzbuzzRule";
+import defaultRule from "./rules/defaulRule";
 
-	return num;
+function fizzbuzz(num) {
+	const rules = [fizzRule, buzzRule, fizzBuzzRule, defaultRule];
+
+	for (const rule of rules) {
+		const result = rule(num);
+		if (result) {
+			return result;
+		}
+	}
 }
 
 export default fizzbuzz;
